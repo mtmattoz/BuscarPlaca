@@ -1,56 +1,114 @@
-# Welcome to your Expo app 👋
+# BuscarPlaca
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+**Aplicativo de consulta de veículos pela placa, desenvolvido com React Native e Expo.**
 
-## Get started
+## Sobre o projeto
 
-1. Install dependencies
+O BuscarPlaca é um aplicativo mobile desenvolvido para facilitar a consulta de informações de veículos por meio da placa.
 
-   ```bash
-   npm install
-   ```
+A aplicação permite pesquisar placas brasileiras, tanto no padrão antigo quanto no Mercosul, e visualizar informações como marca, modelo, ano, cor, combustível e outros dados disponíveis na API.
 
-2. Start the app
+Além disso, o aplicativo apresenta valores de referência da Tabela FIPE e mantém um histórico das consultas realizadas.
 
-   ```bash
-   npx expo start
-   ```
+## Motivação
 
-In the output, you'll find options to open the app in a
+Sempre gostei de carros e tive curiosidade de conhecer diferentes modelos, versões e características dos veículos que vejo no dia a dia.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Foi a partir desse interesse que surgiu a ideia de criar o BuscarPlaca, unindo minha curiosidade pelo mundo automotivo com a oportunidade de colocar em prática meus conhecimentos em desenvolvimento mobile.
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+O objetivo foi desenvolver uma aplicação simples, intuitiva e funcional que permitisse consultar informações de veículos de maneira rápida.
 
-## Get a fresh project
+## Funcionalidades
 
-When you're ready, run:
+- **Início:** apresentação do aplicativo, acesso rápido à consulta e resumo do histórico.
+- **Consultar:** pesquisa de veículos pela placa, com validação dos padrões brasileiro antigo e Mercosul.
+- **Resultado:** exibição das informações retornadas pela API, incluindo os valores disponíveis da Tabela FIPE.
+- **Histórico:** armazenamento local das consultas, permitindo visualizar novamente os resultados e excluir registros.
+- **Sobre:** apresentação do projeto, sua motivação e tecnologias utilizadas.
 
-```bash
-npm run reset-project
+O aplicativo também possui indicadores de carregamento, tratamento de erros e navegação por menus inferior e lateral.
+
+## Tecnologias utilizadas
+
+- **React Native:** desenvolvimento da interface mobile.
+- **Expo:** configuração e execução do aplicativo.
+- **JavaScript:** linguagem de programação.
+- **Expo Router:** navegação baseada em arquivos (File-Based Routing).
+- **Stack, Tabs e Drawer:** organização da navegação entre telas.
+- **Fetch API:** realização de requisições HTTP.
+- **AsyncStorage:** armazenamento local do histórico.
+- **React Hooks:** gerenciamento de estado e efeitos com `useState` e `useEffect`.
+- **StyleSheet e Flexbox:** estilização e organização das interfaces.
+
+## API utilizada
+
+O aplicativo utiliza a API da Parallelum para consultar informações de veículos por meio da placa.
+
+A integração é realizada utilizando `fetch`, com tratamento de respostas, erros e estados de carregamento.
+
+Os dados apresentados dependem da disponibilidade da API. Os valores da Tabela FIPE são referências de mercado e podem variar conforme a versão e as características do veículo.
+
+## Organização do projeto
+
+```text
+BuscarPlaca/
+├── app/
+│   ├── _layout.js
+│   ├── resultado.js
+│   └── (drawer)/
+│       ├── _layout.js
+│       └── (tabs)/
+│           ├── _layout.js
+│           ├── index.js
+│           ├── consulta.js
+│           ├── historico.js
+│           └── sobre.js
+├── components/
+│   └── CardFipe.js
+├── services/
+│   ├── veiculos.js
+│   └── historico.js
+├── assets/
+├── app.json
+└── package.json
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+## Como executar
 
-### Other setup steps
+É necessário ter o Node.js instalado e utilizar o Expo Go no dispositivo móvel.
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+**1. Clone o repositório:**
 
-## Learn more
+```bash
+git clone https://github.com/mtmattoz/BuscarPlaca.git
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+**2. Acesse a pasta do projeto:**
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+cd BuscarPlaca
+```
 
-## Join the community
+**3. Instale as dependências:**
 
-Join our community of developers creating universal apps.
+```bash
+npm install
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+**4. Inicie o Expo:**
+
+```bash
+npx expo start --tunnel
+```
+
+**5.** Abra o Expo Go no celular e escaneie o QR Code apresentado no terminal.
+
+## Apoio de Inteligência Artificial
+
+Durante o desenvolvimento, foi utilizado o ChatGPT (OpenAI, GPT-6) como ferramenta de apoio para explicação de conceitos, configuração do ambiente, sugestões nos erros, escolha de ícones, estudo de recursos complementares aos conteúdos que não foram apresentados na disciplina e revisão gramatical dos textos.
+
+##  Desenvolvedores
+
+**Mateus de Mattos e Lucas Diniz**
+
+**GitHub:** https://github.com/mtmattoz/BuscarPlaca
