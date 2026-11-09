@@ -2,13 +2,7 @@
 import { Drawer } from 'expo-router/drawer';
 import { usePathname, useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import {
-  View,
-  Text,
-  StyleSheet,
-  Pressable,
-  ScrollView,
-} from 'react-native';
+import {View,Text,StyleSheet,Pressable,ScrollView,} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const menus = [
