@@ -8,7 +8,7 @@ export default function CardFipe({ precos }) {
   return (
     <View style={styles.card}>
       <View style={styles.cabecalho}>
-        <Ionicons name="pricetag-outline" size={24} color="#2563EB" />
+        <Ionicons name="pricetag-outline" size={24} color="#1B2A4A" />
         <Text style={styles.titulo}>Tabela FIPE</Text>
       </View>
 
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   valor: {
-    color: '#2563EB',
+    color: '#1B2A4A',
     fontSize: 27,
     fontWeight: 'bold',
     marginVertical: 10,

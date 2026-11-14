@@ -7,7 +7,7 @@ export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={({ navigation }) => ({
-        tabBarActiveTintColor: '#2563EB',
+        tabBarActiveTintColor: '#1B2A4A',
         headerTitle: 'BuscarPlaca',
         headerLeft: () => (
           <Pressable
@@ -35,6 +35,20 @@ export default function TabsLayout() {
           title: 'Consultar',
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="search-outline" size={size} color={color} />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="comparar"
+        options={{
+          title: 'Comparar',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons
+              name="stats-chart-outline"
+              size={size}
+              color={color}
+            />
           ),
         }}
       />

@@ -62,7 +62,7 @@ async function consultarPlaca() {
     <SafeAreaView style={styles.container} edges={['bottom']}>
       <View style={styles.conteudo}>
         <View style={styles.iconeContainer}>
-          <Ionicons name="car-sport-outline" size={42} color="#2563EB" />
+          <Ionicons name="car-sport-outline" size={42} color="#1B2A4A" />
         </View>
 
         <Text style={styles.titulo}>Consultar veículo</Text>
@@ -206,7 +206,7 @@ const styles = StyleSheet.create({
   },
 
   botao: {
-    backgroundColor: '#2563EB',
+    backgroundColor: '#1B2A4A',
     borderRadius: 12,
     paddingVertical: 17,
     flexDirection: 'row',

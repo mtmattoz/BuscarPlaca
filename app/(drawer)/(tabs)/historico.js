@@ -93,7 +93,7 @@ export default function Historico() {
         activeOpacity={0.8}
       >
         <View style={styles.icone}>
-          <Ionicons name="car-sport-outline" size={27} color="#2563EB" />
+          <Ionicons name="car-sport-outline" size={27} color="#1B2A4A" />
         </View>
 
         <View style={styles.detalhes}>
@@ -137,7 +137,7 @@ export default function Historico() {
       {carregando ? (
         <ActivityIndicator
           size="large"
-          color="#2563EB"
+          color="#1B2A4A"
           style={{ marginTop: 50 }}
         />
       ) : (

@@ -13,7 +13,7 @@ export default function Sobre() {
             <Ionicons
               name="car-sport-outline"
               size={48}
-              color="#2563EB"
+              color="#1B2A4A"
             />
           </View>
 
@@ -31,7 +31,7 @@ export default function Sobre() {
             <Ionicons
               name="information-circle-outline"
               size={24}
-              color="#2563EB"
+              color="#1B2A4A"
             />
             <Text style={styles.titulo}>Sobre o projeto</Text>
           </View>
@@ -56,7 +56,7 @@ export default function Sobre() {
             <Ionicons
               name="heart-outline"
               size={24}
-              color="#2563EB"
+              color="#1B2A4A"
             />
             <Text style={styles.titulo}>
               Por que criei o BuscarPlaca?
@@ -87,7 +87,7 @@ export default function Sobre() {
             <Ionicons
               name="code-slash-outline"
               size={24}
-              color="#2563EB"
+              color="#1B2A4A"
             />
             <Text style={styles.titulo}>
               Tecnologias utilizadas
@@ -106,7 +106,7 @@ export default function Sobre() {
               <Ionicons
                 name="checkmark-circle-outline"
                 size={19}
-                color="#2563EB"
+                color="#1B2A4A"
               />
 
               <Text style={styles.tecnologiaTexto}>
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
 
   versao: {
     backgroundColor: '#EFF6FF',
-    color: '#2563EB',
+    color: '#1B2A4A',
     paddingHorizontal: 14,
     paddingVertical: 6,
     borderRadius: 20,

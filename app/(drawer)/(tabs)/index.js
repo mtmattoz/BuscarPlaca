@@ -93,7 +93,7 @@ export default function Inicio() {
             <Ionicons
               name="cloud-outline"
               size={28}
-              color="#2563EB"
+              color="##1B2A4A"
             />
 
             <Text style={styles.apiTitulo}>
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   },
 
   cardPrincipal: {
-    backgroundColor: '#2563EB',
+    backgroundColor: '#1B2A4A',
     padding: 24,
     borderRadius: 20,
     marginBottom: 28,
@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
   },
 
   botaoTexto: {
-    color: '#2563EB',
+    color: '#1B2A4A',
     fontWeight: 'bold',
     fontSize: 16,
   },

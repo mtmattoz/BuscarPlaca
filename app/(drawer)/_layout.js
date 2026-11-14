@@ -5,12 +5,35 @@ import { Ionicons } from '@expo/vector-icons';
 import {View,Text,StyleSheet,Pressable,ScrollView,} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+
 const menus = [
-  { titulo: 'Início', rota: '/', icone: 'home-outline' },
-  { titulo: 'Consultar', rota: '/consulta', icone: 'search-outline' },
-  { titulo: 'Histórico', rota: '/historico', icone: 'time-outline' },
-  { titulo: 'Sobre', rota: '/sobre', icone: 'information-circle-outline' },
+  {
+    titulo: 'Início',
+    rota: '/',
+    icone: 'home-outline',
+  },
+  {
+    titulo: 'Consultar',
+    rota: '/consulta',
+    icone: 'search-outline',
+  },
+  {
+    titulo: 'Comparar',
+    rota: '/comparar',
+    icone: 'stats-chart-outline',
+  },
+  {
+    titulo: 'Histórico',
+    rota: '/historico',
+    icone: 'time-outline',
+  },
+  {
+    titulo: 'Sobre',
+    rota: '/sobre',
+    icone: 'information-circle-outline',
+  },
 ];
+
 
 function ConteudoDrawer({ navigation }) {
   const router = useRouter();
@@ -23,7 +46,7 @@ function ConteudoDrawer({ navigation }) {
           <Ionicons
             name="car-sport-outline"
             size={42}
-            color="#2563EB"
+            color="#1B2A4A"
           />
 
           <Text style={styles.titulo}>BuscarPlaca</Text>
@@ -51,7 +74,7 @@ function ConteudoDrawer({ navigation }) {
                 <Ionicons
                   name={item.icone}
                   size={23}
-                  color={selecionado ? '#2563EB' : '#4B5563'}
+                  color={selecionado ? '#1B2A4A' : '#4B5563'}
                 />
 
                 <Text
@@ -139,7 +162,7 @@ const styles = StyleSheet.create({
   },
 
   textoAtivo: {
-    color: '#2563EB',
+    color: '#1B2A4A',
     fontWeight: 'bold',
   },
 });
