@@ -1,5 +1,5 @@
 
-import {View,Text,ScrollView,StyleSheet,} from 'react-native';
+import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
@@ -9,115 +9,106 @@ export default function Sobre() {
       <ScrollView contentContainerStyle={styles.conteudo}>
 
         <View style={styles.cabecalho}>
-          <View style={styles.icone}>
-            <Ionicons
-              name="car-sport-outline"
-              size={48}
-              color="#1B2A4A"
-            />
-          </View>
+          <Ionicons
+            name="car-sport-outline"
+            size={38}
+            color="#1B2A4A"
+          />
 
-          <Text style={styles.nome}>BuscarPlaca</Text>
-
-          <Text style={styles.subtitulo}>
-            Consulta de veículos pela placa
-          </Text>
-
-          <Text style={styles.versao}>Versão 1.0</Text>
+          <Text style={styles.nome}>BuscarPlaca.</Text>
         </View>
 
-        <View style={styles.card}>
-          <View style={styles.tituloCard}>
-            <Ionicons
-              name="information-circle-outline"
-              size={24}
-              color="#1B2A4A"
-            />
-            <Text style={styles.titulo}>Sobre o projeto</Text>
-          </View>
+        <Text style={styles.subtitulo}>
+          Consulta e comparação de veículos
+        </Text>
 
-          <Text style={styles.texto}>
-            O BuscarPlaca é um aplicativo desenvolvido para
-            consultar informações de veículos por meio de suas
-            placas. Ele permite visualizar dados como marca,
-            modelo, ano, cor e outras características disponíveis
-            na API utilizada.
-          </Text>
+        <Text style={styles.versao}>VERSÃO 1.0</Text>
 
-          <Text style={styles.texto}>
-            O aplicativo também conta com um histórico de
-            consultas, permitindo acessar novamente os veículos
-            pesquisados.
-          </Text>
-        </View>
+        <View style={styles.linhaDestaque} />
 
-        <View style={styles.card}>
-          <View style={styles.tituloCard}>
-            <Ionicons
-              name="heart-outline"
-              size={24}
-              color="#1B2A4A"
-            />
-            <Text style={styles.titulo}>
-              Por que criei o BuscarPlaca?
-            </Text>
-          </View>
+        <Text style={styles.titulo}>Sobre o projeto</Text>
 
-          <Text style={styles.texto}>
-            Sempre gostei de carros e tive curiosidade de
-            conhecer diferentes modelos e descobrir mais
-            informações sobre os veículos que vejo no dia a dia.
-          </Text>
+        <Text style={styles.texto}>
+          O BuscarPlaca é um aplicativo que permite consultar
+          informações de veículos pela placa, como marca, modelo,
+          ano, cor e valores da Tabela FIPE.
+        </Text>
 
-          <Text style={styles.texto}>
-            Foi dessa curiosidade que surgiu a ideia de desenvolver
-            o BuscarPlaca, unindo meu interesse pelo mundo
-            automotivo com a oportunidade de colocar meus
-            conhecimentos em programação em prática.
-          </Text>
+        <Text style={styles.texto}>
+          Também é possível comparar dois carros, visualizar suas
+          fotos e acompanhar a evolução dos preços ao longo dos
+          anos por meio de um gráfico que mostra a porcentagem
+          de valorização ou desvalorização.
+        </Text>
 
-          <Text style={styles.texto}>
-            Meu objetivo foi transformar essa curiosidade em
-            um aplicativo simples, prático e funcional.
-          </Text>
-        </View>
+        <Text style={styles.texto}>
+          As consultas ficam salvas no histórico do aplicativo,
+          podendo ser acessadas novamente quando necessário.
+        </Text>
 
-        <View style={styles.card}>
-          <View style={styles.tituloCard}>
-            <Ionicons
-              name="code-slash-outline"
-              size={24}
-              color="#1B2A4A"
-            />
-            <Text style={styles.titulo}>
-              Tecnologias utilizadas
-            </Text>
-          </View>
+        <Text style={styles.titulo}>Como surgiu a ideia?</Text>
 
-          {[
-            'React Native',
-            'Expo',
-            'JavaScript',
-            'Expo Router',
-            'Fetch API',
-            'AsyncStorage',
-          ].map((tecnologia) => (
-            <View key={tecnologia} style={styles.tecnologia}>
-              <Ionicons
-                name="checkmark-circle-outline"
-                size={19}
-                color="#1B2A4A"
-              />
+        <Text style={styles.texto}>
+          Sempre gostei de carros e sempre tive curiosidade de
+          pesquisar sobre os diferentes modelos que vejo na rua.
+          A ideia do BuscarPlaca surgiu justamente dessa
+          curiosidade.
+        </Text>
 
-              <Text style={styles.tecnologiaTexto}>
-                {tecnologia}
-              </Text>
-            </View>
-          ))}
-        </View>
+        <Text style={styles.texto}>
+          Aproveitei a oportunidade de desenvolver um aplicativo
+          sobre um assunto que gosto e colocar em prática os
+          conhecimentos adquiridos durante a disciplina.
+        </Text>
+
+        <View style={styles.divisoria} />
+
+        <Text style={styles.titulo}>De onde vêm os dados?</Text>
+
+        <Text style={styles.nomeApi}>Parallelum</Text>
+
+        <Text style={styles.texto}>
+          Consulta de placas, informações dos veículos e valores
+          atuais da Tabela FIPE.
+        </Text>
+
+        <Text style={styles.nomeApi}>FipeData</Text>
+
+        <Text style={styles.texto}>
+          Consulta do histórico de preços utilizado no gráfico
+          de comparação dos veículos.
+        </Text>
+
+        <Text style={styles.nomeApi}>Wikimedia Commons</Text>
+
+        <Text style={styles.texto}>
+          Busca de imagens de referência dos carros selecionados.
+        </Text>
+
+        <View style={styles.divisoria} />
+
+        <Text style={styles.titulo}>Tecnologias utilizadas</Text>
+
+        <Text style={styles.texto}>
+          React Native, Expo, JavaScript, Expo Router,
+          Fetch API, AsyncStorage, React Native Chart Kit
+          e React Native SVG.
+        </Text>
+
+        <View style={styles.divisoria} />
+
+        <Text style={styles.titulo}>Desenvolvedores</Text>
+
+        <Text style={styles.desenvolvedor}>
+          Mateus de Mattos
+        </Text>
+
+        <Text style={styles.desenvolvedor}>
+          Lucas Diniz
+        </Text>
 
         <Text style={styles.rodape}>
-          BuscarPlaca • Desenvolvido com React Native
+          Desenvolvido com React Native e Expo.
         </Text>
 
       </ScrollView>
@@ -128,99 +119,89 @@ export default function Sobre() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8FAFC',
+    backgroundColor: '#FFFFFF',
   },
 
   conteudo: {
-    padding: 24,
-    paddingBottom: 40,
+    padding: 26,
+    paddingBottom: 45,
   },
 
   cabecalho: {
+    flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 30,
-    marginTop: 15,
-  },
-
-  icone: {
-    width: 90,
-    height: 90,
-    borderRadius: 25,
-    backgroundColor: '#DBEAFE',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 15,
+    gap: 12,
+    marginTop: 20,
   },
 
   nome: {
-    fontSize: 29,
+    fontSize: 35,
     fontWeight: 'bold',
-    color: '#111827',
+    color: '#1B2A4A',
+    letterSpacing: -1.5,
   },
 
   subtitulo: {
-    color: '#6B7280',
-    fontSize: 14,
-    marginTop: 6,
+    fontSize: 15,
+    color: '#64748B',
+    marginTop: 8,
   },
 
   versao: {
-    backgroundColor: '#EFF6FF',
-    color: '#1B2A4A',
-    paddingHorizontal: 14,
-    paddingVertical: 6,
-    borderRadius: 20,
-    marginTop: 12,
-    fontSize: 12,
-    fontWeight: 'bold',
+    fontSize: 11,
+    letterSpacing: 2,
+    color: '#94A3B8',
+    marginTop: 10,
   },
 
-  card: {
-    backgroundColor: '#FFFFFF',
-    borderRadius: 16,
-    padding: 22,
-    marginBottom: 18,
-    borderWidth: 1,
-    borderColor: '#E5E7EB',
-  },
-
-  tituloCard: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 10,
-    marginBottom: 15,
+  linhaDestaque: {
+    width: 50,
+    height: 3,
+    backgroundColor: '#1B2A4A',
+    marginTop: 25,
+    marginBottom: 12,
   },
 
   titulo: {
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: 'bold',
-    color: '#111827',
-    flex: 1,
+    color: '#1B2A4A',
+    marginTop: 24,
+    marginBottom: 15,
+    letterSpacing: -0.5,
   },
 
   texto: {
-    fontSize: 14,
-    color: '#4B5563',
-    lineHeight: 23,
-    marginBottom: 12,
-  },
-
-  tecnologia: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 10,
-    marginBottom: 12,
-  },
-
-  tecnologiaTexto: {
     fontSize: 15,
-    color: '#374151',
+    color: '#475569',
+    lineHeight: 25,
+    marginBottom: 14,
+  },
+
+  divisoria: {
+    height: 1,
+    backgroundColor: '#E2E8F0',
+    marginTop: 15,
+    marginBottom: 4,
+  },
+
+  nomeApi: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#1B2A4A',
+    marginTop: 5,
+    marginBottom: 5,
+  },
+
+  desenvolvedor: {
+    fontSize: 17,
+    color: '#334155',
+    marginBottom: 8,
   },
 
   rodape: {
-    textAlign: 'center',
-    color: '#9CA3AF',
     fontSize: 12,
-    marginTop: 12,
+    color: '#94A3B8',
+    marginTop: 30,
   },
 });
