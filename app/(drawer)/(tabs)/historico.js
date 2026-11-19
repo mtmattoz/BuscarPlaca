@@ -161,72 +161,81 @@ export default function Historico() {
   );
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8FAFC',
+    backgroundColor: '#FFFFFF',
   },
+
   cabecalho: {
     padding: 24,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
   },
+
   titulo: {
-    fontSize: 28,
+    fontSize: 30,
     fontWeight: 'bold',
-    color: '#111827',
+    color: '#1B2A4A',
   },
+
   subtitulo: {
     fontSize: 14,
     color: '#6B7280',
     marginTop: 5,
   },
+
   lista: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 24,
     paddingBottom: 30,
     flexGrow: 1,
   },
+
   card: {
-    backgroundColor: '#FFFFFF',
-    borderRadius: 15,
-    padding: 16,
-    marginBottom: 12,
-    borderWidth: 1,
-    borderColor: '#E5E7EB',
+    paddingVertical: 20,
+    borderBottomWidth: 1,
+    borderBottomColor: '#E5E7EB',
     flexDirection: 'row',
     alignItems: 'center',
     gap: 14,
   },
+
   icone: {
-    width: 50,
-    height: 50,
-    borderRadius: 12,
-    backgroundColor: '#DBEAFE',
+    width: 42,
+    height: 42,
     justifyContent: 'center',
     alignItems: 'center',
   },
+
   detalhes: {
     flex: 1,
   },
+
   placa: {
-    fontSize: 19,
+    fontSize: 20,
     fontWeight: 'bold',
-    color: '#111827',
+    color: '#1B2A4A',
+    letterSpacing: 1,
   },
+
   modelo: {
-    fontSize: 13,
+    fontSize: 14,
     color: '#4B5563',
-    marginTop: 3,
-  },
-  data: {
-    fontSize: 12,
-    color: '#9CA3AF',
     marginTop: 5,
   },
-  excluir: {
-    padding: 8,
+
+  data: {
+    fontSize: 12,
+    color: '#64748B',
+    marginTop: 6,
   },
+
+  excluir: {
+    padding: 10,
+  },
+
   vazio: {
     flex: 1,
     justifyContent: 'center',
@@ -234,14 +243,17 @@ const styles = StyleSheet.create({
     padding: 24,
     gap: 12,
   },
+
   vazioTitulo: {
-    fontSize: 19,
+    fontSize: 20,
     fontWeight: 'bold',
-    color: '#374151',
+    color: '#1B2A4A',
   },
+
   vazioTexto: {
     fontSize: 14,
     color: '#6B7280',
     textAlign: 'center',
+    lineHeight: 22,
   },
 });

@@ -600,208 +600,240 @@ export default function Comparar() {
   );
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8FAFC',
+    backgroundColor: '#FFFFFF',
   },
+
   conteudo: {
-    padding: 16,
+    padding: 22,
     paddingBottom: 50,
   },
+
   titulo: {
-    fontSize: 27,
+    fontSize: 30,
     fontWeight: 'bold',
-    color: '#111827',
-    marginBottom: 8,
+    color: '#1B2A4A',
+    marginBottom: 10,
   },
+
   descricao: {
     fontSize: 14,
     color: '#6B7280',
     lineHeight: 22,
     marginBottom: 22,
   },
+
   card: {
-    backgroundColor: '#FFFFFF',
-    padding: 18,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: '#E5E7EB',
+    paddingVertical: 22,
+    borderTopWidth: 1,
+    borderColor: '#D1D5DB',
     marginBottom: 16,
   },
+
   cabecalhoCard: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 10,
     marginBottom: 18,
   },
+
   cardTitulo: {
-    fontSize: 17,
+    fontSize: 20,
     fontWeight: 'bold',
-    color: '#111827',
+    color: '#1B2A4A',
     marginBottom: 8,
   },
+
   campo: {
     marginBottom: 15,
   },
+
   label: {
     fontSize: 13,
     color: '#374151',
     fontWeight: '600',
     marginBottom: 7,
   },
+
   pickerContainer: {
-    borderWidth: 1,
-    borderColor: '#D1D5DB',
-    borderRadius: 10,
-    backgroundColor: '#FFFFFF',
+    borderBottomWidth: 1,
+    borderColor: '#CBD5E1',
+    backgroundColor: '#F5F5F5',
     minHeight: 54,
-    paddingHorizontal: 15,
+    paddingHorizontal: 12,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     gap: 10,
   },
+
   seletorDesabilitado: {
     backgroundColor: '#F1F5F9',
     opacity: 0.65,
   },
+
   seletorTexto: {
     flex: 1,
     fontSize: 15,
     color: '#111827',
   },
+
   seletorPlaceholder: {
-    color: '#9CA3AF',
+    color: '#6B7280',
   },
+
   modalFundo: {
     flex: 1,
     justifyContent: 'flex-end',
     backgroundColor: 'rgba(0,0,0,0.35)',
   },
+
   modalFora: {
     flex: 1,
   },
+
   modalConteudo: {
     backgroundColor: '#FFFFFF',
-    borderTopLeftRadius: 22,
-    borderTopRightRadius: 22,
-    padding: 18,
+    borderTopLeftRadius: 8,
+    borderTopRightRadius: 8,
+    padding: 22,
     height: '75%',
   },
+
   modalCabecalho: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 15,
   },
+
   modalTitulo: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: 'bold',
-    color: '#111827',
+    color: '#1B2A4A',
   },
+
   busca: {
-    borderWidth: 1,
-    borderColor: '#D1D5DB',
-    borderRadius: 12,
-    paddingHorizontal: 15,
-    paddingVertical: 12,
+    borderBottomWidth: 1,
+    borderColor: '#94A3B8',
+    paddingHorizontal: 10,
+    paddingVertical: 14,
     fontSize: 16,
     color: '#111827',
     marginBottom: 12,
   },
+
   opcao: {
-    paddingVertical: 15,
+    paddingVertical: 17,
     paddingHorizontal: 8,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     borderBottomWidth: 1,
-    borderBottomColor: '#F1F5F9',
+    borderBottomColor: '#E5E7EB',
   },
+
   opcaoTexto: {
     flex: 1,
     fontSize: 16,
     color: '#111827',
   },
+
   listaVazia: {
     textAlign: 'center',
     color: '#6B7280',
     marginTop: 30,
   },
+
   botao: {
-    backgroundColor: '#2563EB',
-    borderRadius: 12,
-    paddingVertical: 17,
+    backgroundColor: '#1B2A4A',
+    borderRadius: 5,
+    paddingVertical: 18,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     gap: 10,
   },
+
   botaoDesativado: {
     opacity: 0.6,
   },
+
   botaoTexto: {
     color: '#FFFFFF',
     fontWeight: 'bold',
     fontSize: 16,
   },
+
   erro: {
     flexDirection: 'row',
     backgroundColor: '#FEF2F2',
-    borderRadius: 10,
+    borderLeftWidth: 3,
+    borderLeftColor: '#DC2626',
     padding: 14,
     marginTop: 18,
     gap: 10,
   },
+
   erroTexto: {
     flex: 1,
     color: '#DC2626',
     fontSize: 13,
   },
+
   resultados: {
     marginTop: 28,
   },
+
   tituloResultado: {
-    fontSize: 22,
+    fontSize: 25,
     fontWeight: 'bold',
-    color: '#111827',
+    color: '#1B2A4A',
     marginBottom: 16,
   },
+
   foto: {
     width: '100%',
-    height: 180,
-    marginVertical: 12,
+    height: 210,
+    marginVertical: 15,
   },
+
   semFoto: {
     height: 150,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F1F5F9',
-    borderRadius: 12,
     marginVertical: 12,
   },
+
   linkFoto: {
     color: '#2563EB',
     fontSize: 12,
     marginBottom: 15,
   },
+
   textoSecundario: {
     color: '#6B7280',
     fontSize: 13,
     lineHeight: 21,
     marginTop: 6,
   },
+
   preco: {
-    fontSize: 26,
-    color: '#2563EB',
+    fontSize: 32,
+    color: '#1B2A4A',
     fontWeight: 'bold',
-    marginVertical: 8,
+    marginVertical: 10,
   },
+
   periodo: {
     color: '#6B7280',
     marginBottom: 15,
   },
+
   textoResultado: {
     fontSize: 17,
     fontWeight: '600',

@@ -129,10 +129,11 @@ export default function Inicio() {
   );
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8FAFC',
+    backgroundColor: '#FFFFFF',
   },
 
   conteudo: {
@@ -141,9 +142,10 @@ const styles = StyleSheet.create({
   },
 
   titulo: {
-    fontSize: 28,
+    fontSize: 36,
     fontWeight: 'bold',
-    color: '#111827',
+    color: '#1B2A4A',
+    letterSpacing: -1.5,
     marginBottom: 10,
   },
 
@@ -156,13 +158,13 @@ const styles = StyleSheet.create({
 
   cardPrincipal: {
     backgroundColor: '#1B2A4A',
-    padding: 24,
-    borderRadius: 20,
-    marginBottom: 28,
+    padding: 26,
+    borderRadius: 5,
+    marginBottom: 30,
   },
 
   cardTitulo: {
-    fontSize: 22,
+    fontSize: 28,
     fontWeight: 'bold',
     color: '#FFFFFF',
     marginTop: 15,
@@ -179,7 +181,7 @@ const styles = StyleSheet.create({
   botaoConsultar: {
     backgroundColor: '#FFFFFF',
     padding: 16,
-    borderRadius: 12,
+    borderRadius: 4,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -193,53 +195,50 @@ const styles = StyleSheet.create({
   },
 
   secaoTitulo: {
-    fontSize: 19,
+    fontSize: 22,
     fontWeight: 'bold',
-    color: '#111827',
-    marginBottom: 15,
+    color: '#1B2A4A',
+    marginBottom: 18,
   },
 
   linhaCards: {
     flexDirection: 'row',
-    gap: 12,
+    gap: 16,
     marginBottom: 25,
   },
 
   cardPequeno: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
-    padding: 18,
-    borderRadius: 15,
-    borderWidth: 1,
-    borderColor: '#E5E7EB',
+    paddingVertical: 18,
+    paddingHorizontal: 8,
+    borderTopWidth: 2,
+    borderColor: '#1B2A4A',
   },
 
   numero: {
-    fontSize: 27,
+    fontSize: 36,
     fontWeight: 'bold',
-    color: '#111827',
+    color: '#1B2A4A',
     marginTop: 12,
   },
 
   apiTitulo: {
-    fontSize: 17,
+    fontSize: 19,
     fontWeight: 'bold',
-    color: '#111827',
+    color: '#1B2A4A',
     marginTop: 18,
   },
 
   cardTexto: {
     color: '#6B7280',
-    fontSize: 12,
+    fontSize: 13,
     marginTop: 5,
   },
 
   cardInformativo: {
-    backgroundColor: '#FFFFFF',
-    padding: 22,
-    borderRadius: 15,
-    borderWidth: 1,
-    borderColor: '#E5E7EB',
+    paddingVertical: 20,
+    borderTopWidth: 1,
+    borderColor: '#D1D5DB',
   },
 
   passo: {

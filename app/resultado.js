@@ -67,10 +67,11 @@ export default function Resultado() {
   );
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8FAFC',
+    backgroundColor: '#FFFFFF',
   },
 
   conteudo: {
@@ -79,60 +80,65 @@ const styles = StyleSheet.create({
   },
 
   icone: {
-    backgroundColor: '#DBEAFE',
-    width: 75,
-    height: 75,
-    borderRadius: 20,
+    width: 50,
+    height: 50,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 18,
+    marginBottom: 15,
   },
 
   titulo: {
-    fontSize: 27,
+    fontSize: 30,
     fontWeight: 'bold',
-    color: '#111827',
+    color: '#1B2A4A',
   },
 
   subtitulo: {
+    fontSize: 14,
     color: '#6B7280',
     marginTop: 6,
     marginBottom: 25,
   },
 
   card: {
-    backgroundColor: '#FFFFFF',
-    padding: 22,
-    borderRadius: 18,
-    borderWidth: 1,
-    borderColor: '#E5E7EB',
+    paddingVertical: 15,
   },
 
   placa: {
-    fontSize: 28,
+    fontSize: 30,
     fontWeight: 'bold',
     textAlign: 'center',
-    letterSpacing: 3,
-    color: '#1B2A4A',
+    letterSpacing: 4,
+    color: '#111827',
+    borderWidth: 2,
+    borderTopWidth: 12,
+    borderColor: '#1B2A4A',
+    borderRadius: 5,
+    paddingVertical: 15,
     marginBottom: 20,
   },
 
   informacao: {
-    paddingVertical: 13,
+    paddingVertical: 17,
     borderBottomWidth: 1,
-    borderBottomColor: '#F1F5F9',
+    borderBottomColor: '#E5E7EB',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 15,
   },
 
   label: {
-    fontSize: 12,
-    color: '#6B7280',
-    marginBottom: 5,
+    fontSize: 14,
+    color: '#64748B',
   },
 
   valor: {
-    fontSize: 17,
+    fontSize: 15,
     color: '#111827',
     fontWeight: '600',
+    flexShrink: 1,
+    textAlign: 'right',
   },
 
   aviso: {
@@ -140,5 +146,6 @@ const styles = StyleSheet.create({
     color: '#6B7280',
     textAlign: 'center',
     marginTop: 20,
+    lineHeight: 18,
   },
 });

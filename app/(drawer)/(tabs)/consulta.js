@@ -126,10 +126,11 @@ async function consultarPlaca() {
   );
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F8FAFC',
+    backgroundColor: '#FFFFFF',
   },
 
   conteudo: {
@@ -139,19 +140,17 @@ const styles = StyleSheet.create({
   },
 
   iconeContainer: {
-    width: 72,
-    height: 72,
-    borderRadius: 20,
-    backgroundColor: '#DBEAFE',
+    width: 55,
+    height: 55,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 22,
+    marginBottom: 18,
   },
 
   titulo: {
-    fontSize: 28,
+    fontSize: 32,
     fontWeight: 'bold',
-    color: '#111827',
+    color: '#1B2A4A',
     marginBottom: 10,
   },
 
@@ -163,11 +162,9 @@ const styles = StyleSheet.create({
   },
 
   card: {
-    backgroundColor: '#FFFFFF',
-    borderRadius: 18,
-    padding: 22,
-    borderWidth: 1,
-    borderColor: '#E5E7EB',
+    paddingVertical: 22,
+    borderTopWidth: 1,
+    borderColor: '#D1D5DB',
   },
 
   label: {
@@ -179,17 +176,18 @@ const styles = StyleSheet.create({
   },
 
   input: {
-    height: 65,
-    borderWidth: 1,
-    borderColor: '#D1D5DB',
-    borderRadius: 12,
+    height: 80,
+    borderWidth: 2,
+    borderTopWidth: 12,
+    borderColor: '#1B2A4A',
+    borderRadius: 5,
     textAlign: 'center',
-    fontSize: 26,
+    fontSize: 32,
     fontWeight: 'bold',
-    letterSpacing: 3,
+    letterSpacing: 5,
     color: '#111827',
-    backgroundColor: '#F9FAFB',
-    marginBottom: 18,
+    backgroundColor: '#FFFFFF',
+    marginBottom: 22,
   },
 
   erroContainer: {
@@ -207,7 +205,7 @@ const styles = StyleSheet.create({
 
   botao: {
     backgroundColor: '#1B2A4A',
-    borderRadius: 12,
+    borderRadius: 5,
     paddingVertical: 17,
     flexDirection: 'row',
     alignItems: 'center',
