@@ -1,11 +1,33 @@
 
-const BASE = 'https://fipe.parallelum.com.br/api/v2/cars';
+const BASE = 'https://fipe.parallelum.com.br/api/v2';
+const CARROS = `${BASE}/cars`;
+
+const FIPE_HISTORICO = 'https://fipe.zuirx.com/api/consulta';
+
+const MESES = [
+  'Janeiro',
+  'Fevereiro',
+  'Março',
+  'Abril',
+  'Maio',
+  'Junho',
+  'Julho',
+  'Agosto',
+  'Setembro',
+  'Outubro',
+  'Novembro',
+  'Dezembro',
+];
 
 async function consultar(url) {
   const resposta = await fetch(url);
 
   if (resposta.status === 429) {
     throw new Error('Limite de consultas da FIPE atingido.');
+  }
+
+  if (resposta.status === 402) {
+    throw new Error('Esta consulta exige um plano pago.');
   }
 
   if (!resposta.ok) {
@@ -15,34 +37,76 @@ async function consultar(url) {
   return resposta.json();
 }
 
+// BUSCAR MARCAS
 export function buscarMarcas() {
-  return consultar(`${BASE}/brands`);
+  return consultar(`${CARROS}/brands`);
 }
 
+// BUSCAR MODELOS
 export function buscarModelos(marcaId) {
-  return consultar(
-    `${BASE}/brands/${encodeURIComponent(marcaId)}/models`
-  );
+  return consultar(`${CARROS}/brands/${marcaId}/models`);
 }
 
+// BUSCAR ANOS
 export function buscarAnos(marcaId, modeloId) {
   return consultar(
-    `${BASE}/brands/${encodeURIComponent(marcaId)}/models/${encodeURIComponent(modeloId)}/years`
+    `${CARROS}/brands/${marcaId}/models/${modeloId}/years`
   );
 }
 
-export function buscarHistorico(codigoFipe, anoId) {
-  return consultar(
-    `${BASE}/${encodeURIComponent(codigoFipe)}/years/${encodeURIComponent(anoId)}/history`
-  );
-}
-
+// BUSCAR DETALHES
 export function buscarDetalhes(marcaId, modeloId, anoId) {
   return consultar(
-    `${BASE}/brands/${encodeURIComponent(marcaId)}/models/${encodeURIComponent(modeloId)}/years/${encodeURIComponent(anoId)}`
+    `${CARROS}/brands/${marcaId}/models/${modeloId}/years/${anoId}`
   );
 }
 
+// BUSCAR HISTÓRICO PELA NOVA API
+export async function buscarHistorico(codigoFipe, anoId) {
+  const [ano, combustivel] = String(anoId).split('-');
+
+  const combustiveis = {
+    '1': 'g',
+    '2': 'a',
+    '3': 'd',
+  };
+
+  const sigla = combustiveis[combustivel];
+
+  const url =
+    `${FIPE_HISTORICO}?fipe=${encodeURIComponent(codigoFipe)}` +
+    `&ano_modelo=${ano}&limit=1000`;
+
+  const dados = await consultar(url);
+
+  if (!Array.isArray(dados)) {
+    throw new Error('Histórico de preços indisponível.');
+  }
+
+  const registros = dados.filter(item =>
+    Number(item.ano_modelo) === Number(ano) &&
+    (!sigla ||
+      String(item.sigla_combustivel).toLowerCase() === sigla)
+  );
+
+  const priceHistory = registros.map(item => ({
+    reference:
+      Number(item.ano_referencia) * 100 +
+      Number(item.mes_referencia),
+
+    month:
+      `${MESES[item.mes_referencia - 1]} de ${item.ano_referencia}`,
+
+    price: Number(item.valor_centavos) / 100,
+  }));
+
+  console.log('Código FIPE:', codigoFipe);
+  console.log('Registros históricos:', priceHistory.length);
+
+  return { priceHistory };
+}
+
+// CONVERTER PREÇO
 export function converterPreco(preco) {
   if (typeof preco === 'number') return preco;
 
@@ -56,6 +120,7 @@ export function converterPreco(preco) {
   );
 }
 
+// ORGANIZAR HISTÓRICO
 export function prepararHistorico(dados) {
   if (!Array.isArray(dados?.priceHistory)) return [];
 
@@ -73,6 +138,7 @@ export function prepararHistorico(dados) {
     .sort((a, b) => a.referencia - b.referencia);
 }
 
+// COMPARAR HISTÓRICOS
 export function compararHistoricos(historicoA, historicoB) {
   const mapaB = new Map(
     historicoB.map(item => [item.referencia, item])
